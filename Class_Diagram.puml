@@ -1,0 +1,44 @@
+@startuml
+
+class Jeu {
+  - etapeJeu : int
+  - vitesseJeu : int
+
+  + Jeu () {}
+  + ~Jeu()
+  
+}
+
+class Grille {
+  - longueur : int
+  - largeur : int
+
+  + Grille() {}
+  + ~Grille()
+  + getLongueur() : int
+  + getLargeur() : int
+}
+
+class Cellule {
+  - positionX : int
+  - positionY : int
+
+  + Cellules() {}
+  + ~Cellules()
+  + getPositionX() : int
+  + getPositionY() : int
+}
+
+class Etat {
+  - etatCellule : int
+
+  + Etat() {}
+  + ~Etat()
+  + getEtatCellule() : int
+}
+
+Jeu <|-- Grille
+Grille <|-- Cellule
+Cellule <|-- Etat 
+
+@enduml
